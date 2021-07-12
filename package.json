@@ -1,0 +1,16 @@
+{
+  "name": "revert-on-red",
+  "version": "1.0.0",
+  "description": "You've all heard of commit on green - but have you heard of revert on red?",
+  "main": "index.js",
+  "repository": "git@github.com:fluidly/revert-on-red.git",
+  "author": "Luke Elliott <luke.elliott@fluidly.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest && git add . && git commit -a -m 'this commit is green' || git checkout . && git clean -d -f"
+  },
+  "dependencies": {
+    "jest": "^27.0.6"
+  }
+}
